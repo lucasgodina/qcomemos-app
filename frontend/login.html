@@ -1,53 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Q'comemos</title>
-    <link rel="stylesheet" href="login.css">
-</head>
-<body>
-    <div class="login-container">
-        <header class="header">
-            <div class="top-bar">
-                <div class="info">
-                    <div class="call">
-                        <span class="icon">📞</span>
-                        <span class="phone-number">11 - 5025 - 2573</span>
-                    </div>
-                    <div class="mail">
-                        <span class="icon">📧</span>
-                        <span class="email">qcomemos@gmail.com</span>
-                    </div>
-                </div>
-            </div>
-            <div class="header-content">
-                <img class="logo" src="imagenes/logosinnombre.png" alt="Logo Q'comemos">
-                <div class="title-logo">Q'comemos</div>
-                <a href="index.html" class="get-started-button">Volver a inicio</a>
-            </div>
-        </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login - Q'comemos</title>
+		<link rel="stylesheet" href="/frontend/assets/css/login.css" />
+	</head>
+	<body>
+		<div class="login-container">
+			<header class="header">
+				<div class="top-bar">
+					<div class="info">
+						<div class="call">
+							<span class="icon">📞</span>
+							<span class="phone-number">11 - 5025 - 2573</span>
+						</div>
+						<div class="mail">
+							<span class="icon">📧</span>
+							<span class="email">qcomemos@gmail.com</span>
+						</div>
+					</div>
+				</div>
+				<div class="header-content">
+					<img
+						class="logo"
+						src="/frontend/assets/img/logosinnombre.png"
+						alt="Logo Q'comemos"
+					/>
+					<div class="title-logo">Q'comemos</div>
+					<a href="/frontend/home.html" class="get-started-button"
+						>Volver a inicio</a
+					>
+				</div>
+			</header>
 
-        <div class="login-form">
-            <img class="form-image" src="imagenes/pexels-bemistermister-3434523.jpg" alt="Form Image">
-            <div class="form-content">
-                <h2 class="login-title">Iniciar sesión</h2>
-                <label for="email" class="label">Email</label>
-                <input type="email" id="email" class="input-field input-email" placeholder="Ingrese su email">
+			<div class="login-form">
+				<img
+					class="form-image"
+					src="/frontend/assets/img/pexels-bemistermister-3434523.jpg"
+					alt="Form Image"
+				/>
+				<div class="form-content">
+					<h2 class="login-title">Iniciar sesión</h2>
+					<label for="email" class="label">Email</label>
+					<input
+						type="email"
+						id="email"
+						class="input-field input-email"
+						placeholder="Ingrese su email"
+					/>
 
-                <label for="password" class="label">Contraseña</label>
-                <input type="password" id="password" class="input-field input-password" placeholder="Ingrese su contraseña">
+					<label for="password" class="label">Contraseña</label>
+					<input
+						type="password"
+						id="password"
+						class="input-field input-password"
+						placeholder="Ingrese su contraseña"
+					/>
 
-                <button class="login-button">Ingresar</button>
+					<button class="login-button">Ingresar</button>
 
-                <div class="create-account">
-                    <span class="no-account">¿No tenés cuenta?</span>
-                    <a href="#" class="create-account-link">Crear cuenta</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
+					<div class="create-account">
+						<span class="no-account">¿No tenés cuenta?</span>
+						<a href="/frontend/register.html" class="create-account-link"
+							>Crear cuenta</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
 <!--
     Pagina de Login / Registro
