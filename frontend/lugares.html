@@ -1,145 +1,200 @@
-    <!DOCTYPE html>
-    <html lang="es">
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lugares - Q'comemos</title>
+		<link rel="stylesheet" href="/frontend/assets/css/lugares.css" />
+	</head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lugares - Q'comemos</title>
-        <link rel="stylesheet" href="lugares.css">
-    </head>
+	<body>
+		<div class="lugares-container">
+			<!-- Header con el logo y el botón "Inicio" -->
+			<header class="header">
+				<div class="header-left">
+					<img
+						class="logo"
+						src="imagenes/logosinnombre.png"
+						alt="Logo Q'comemos"
+					/>
+					<span class="title-logo">Q'comemos</span>
+				</div>
+				<div class="header-right">
+					<a href="home.html" class="button">Inicio</a>
+				</div>
+			</header>
 
-    <body>
-        <div class="lugares-container">
+			<!-- Sección Hero -->
+			<div class="hero">
+				<img
+					class="hero-image"
+					src="imagenes/pexels-ella-olsson-572949-1640774.jpg"
+					alt="Imagen hero"
+				/>
+				<div class="hero-content">
+					<h1 class="title">¡Los mejores lugares!</h1>
+					<p class="subtitle">
+						Te dejamos una selección de los mejores lugares de la zona, podrás
+						filtrar y encontrar el indicado para vos.
+					</p>
+					<div class="filter-buttons">
+						<button class="filter-button">Todo</button>
+						<button class="filter-button">Desayuno</button>
+						<button class="filter-button">Almuerzo</button>
+						<button class="filter-button">Merienda</button>
+						<button class="filter-button">Cena</button>
+					</div>
+				</div>
+			</div>
 
-            <!-- Header con el logo y el botón "Inicio" -->
-            <header class="header">
-                <div class="header-left">
-                    <img class="logo" src="imagenes/logosinnombre.png" alt="Logo Q'comemos">
-                    <span class="title-logo">Q'comemos</span>
-                </div>
-                <div class="header-right">
-                    <a href="home.html" class="button">Inicio</a>
-                </div>
-            </header>
+			<!-- Sección de Lugares con desplazamiento horizontal -->
+			<div class="places-section-scroll">
+				<div class="place-card">
+					<img
+						src="imagenes/eljardin.jfif"
+						alt="Imagen lugar"
+						class="place-image"
+						id="eljardin"
+					/>
+					<h3 class="place-title">El Jardín</h3>
+					<p class="place-address">Juncal 121, Ituzaingó, Buenos Aires</p>
+				</div>
+				<div class="place-card">
+					<img
+						src="imagenes/elbodegon.jfif"
+						alt="Imagen lugar"
+						class="place-image"
+					/>
+					<h3 class="place-title">El Bodegón</h3>
+					<p class="place-address">
+						Gral. Miguel Soler 494, Ituzaingó, Buenos Aires
+					</p>
+				</div>
+				<div class="place-card">
+					<img
+						src="imagenes/juanabar.jpg"
+						alt="Imagen lugar"
+						class="place-image"
+					/>
+					<h3 class="place-title">Juana Bar</h3>
+					<p class="place-address">Belgrano 21489, Ituzaingó, Buenos Aires</p>
+				</div>
+				<div class="place-card">
+					<img
+						src="imagenes/la-esquina-due.jpg"
+						alt="Imagen lugar"
+						class="place-image"
+					/>
+					<h3 class="place-title">La Intendencia</h3>
+					<p class="place-address">
+						Gral. Las Heras 101, Ituzaingó, Buenos Aires
+					</p>
+				</div>
 
-            <!-- Sección Hero -->
-            <div class="hero">
-                <img class="hero-image" src="imagenes/pexels-ella-olsson-572949-1640774.jpg" alt="Imagen hero">
-                <div class="hero-content">
-                    <h1 class="title">¡Los mejores lugares!</h1>
-                    <p class="subtitle">Te dejamos una selección de los mejores lugares de la zona, podrás filtrar y
-                        encontrar el indicado para vos.</p>
-                    <div class="filter-buttons">
-                        <button class="filter-button">Todo</button>
-                        <button class="filter-button">Desayuno</button>
-                        <button class="filter-button">Almuerzo</button>
-                        <button class="filter-button">Merienda</button>
-                        <button class="filter-button">Cena</button>
-                    </div>
-                </div>
-            </div>
+				<!-- Más lugares para agregar en el futuro -->
+				<div class="place-card">
+					<h3 class="place-title">Nuevo Lugar 1</h3>
+					<p class="place-address">Dirección del nuevo lugar</p>
+				</div>
+				<div class="place-card">
+					<h3 class="place-title">Nuevo Lugar 2</h3>
+					<p class="place-address">Dirección del nuevo lugar</p>
+				</div>
+				<div class="place-card">
+					<h3 class="place-title">Nuevo Lugar 3</h3>
+					<p class="place-address">Dirección del nuevo lugar</p>
+				</div>
+				<div class="place-card">
+					<h3 class="place-title">Nuevo Lugar 4</h3>
+					<p class="place-address">Dirección del nuevo lugar</p>
+				</div>
+			</div>
 
-            <!-- Sección de Lugares con desplazamiento horizontal -->
-            <div class="places-section-scroll">
-                <div class="place-card">
-                    <img src="imagenes/eljardin.jfif" alt="Imagen lugar" class="place-image" id="eljardin">
-                    <h3 class="place-title">El Jardín</h3>
-                    <p class="place-address">Juncal 121, Ituzaingó, Buenos Aires</p>
-                </div>
-                <div class="place-card">
-                    <img src="imagenes/elbodegon.jfif" alt="Imagen lugar" class="place-image">
-                    <h3 class="place-title">El Bodegón</h3>
-                    <p class="place-address">Gral. Miguel Soler 494, Ituzaingó, Buenos Aires</p>
-                </div>
-                <div class="place-card">
-                    <img src="imagenes/juanabar.jpg" alt="Imagen lugar" class="place-image">
-                    <h3 class="place-title">Juana Bar</h3>
-                    <p class="place-address">Belgrano 21489, Ituzaingó, Buenos Aires</p>
-                </div>
-                <div class="place-card">
-                    <img src="imagenes/la-esquina-due.jpg" alt="Imagen lugar" class="place-image">
-                    <h3 class="place-title">La Intendencia</h3>
-                    <p class="place-address">Gral. Las Heras 101, Ituzaingó, Buenos Aires</p>
-                </div>
+			<!-- Modal para ampliar imagen y descripción de El Jardín -->
+			<div id="modalElJardin" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h3 class="modal-title" style="color: #f97a03">El Jardín</h3>
+					<p class="modal-address">Juncal 121, Ituzaingó, Buenos Aires</p>
+					<p class="modal-description">
+						Un lugar encantador rodeado de naturaleza, ideal para disfrutar de
+						una comida al aire libre.
+					</p>
 
-                <!-- Más lugares para agregar en el futuro -->
-                <div class="place-card">
-                    <h3 class="place-title">Nuevo Lugar 1</h3>
-                    <p class="place-address">Dirección del nuevo lugar</p>
-                </div>
-                <div class="place-card">
-                    <h3 class="place-title">Nuevo Lugar 2</h3>
-                    <p class="place-address">Dirección del nuevo lugar</p>
-                </div>
-                <div class="place-card">
-                    <h3 class="place-title">Nuevo Lugar 3</h3>
-                    <p class="place-address">Dirección del nuevo lugar</p>
-                </div>
-                <div class="place-card">
-                    <h3 class="place-title">Nuevo Lugar 4</h3>
-                    <p class="place-address">Dirección del nuevo lugar</p>
-                </div>
-            </div>
+					<!-- Imágenes de comidas -->
+					<div class="modal-images">
+						<img
+							src="imagenes/el jardin foto 1.png"
+							alt="Comida 1"
+							class="modal-image"
+						/>
+						<img
+							src="imagenes/el jardin foto 2.png"
+							alt="Comida 2"
+							class="modal-image"
+						/>
+						<img
+							src="imagenes/el jardin foto 3.png"
+							alt="Comida 3"
+							class="modal-image"
+						/>
+					</div>
 
-            <!-- Modal para ampliar imagen y descripción de El Jardín -->
-    <div id="modalElJardin" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3 class="modal-title" style="color: #F97A03;">El Jardín</h3>
-            <p class="modal-address">Juncal 121, Ituzaingó, Buenos Aires</p>
-            <p class="modal-description">Un lugar encantador rodeado de naturaleza, ideal para disfrutar de una comida al aire libre.</p>
+					<!-- Caja de reseñas -->
+					<div class="reviews">
+						<h4>Reseñas de usuarios</h4>
+						<div id="exampleReviews"></div>
+						<!-- Contenedor para las reseñas de ejemplo -->
+						<div id="commentsList"></div>
+						<!-- Contenedor para reseñas enviadas -->
+					</div>
 
-            <!-- Imágenes de comidas -->
-            <div class="modal-images">
-                <img src="imagenes/el jardin foto 1.png" alt="Comida 1" class="modal-image">
-                <img src="imagenes/el jardin foto 2.png" alt="Comida 2" class="modal-image">
-                <img src="imagenes/el jardin foto 3.png" alt="Comida 3" class="modal-image">
-            </div>
+					<!-- Caja para añadir reseña -->
+					<div class="comment-box">
+						<h4>Escribí tu reseña</h4>
+						<textarea
+							id="userComment"
+							rows="4"
+							placeholder="Escribí tu reseña aquí"
+						></textarea>
+						<button id="submitComment">Enviar</button>
+					</div>
+				</div>
+			</div>
 
-            <!-- Caja de reseñas -->
-            <div class="reviews">
-                <h4>Reseñas de usuarios</h4>
-                <div id="exampleReviews"></div> <!-- Contenedor para las reseñas de ejemplo -->
-                <div id="commentsList"></div> <!-- Contenedor para reseñas enviadas -->
-            </div>
+			<!-- Footer -->
+			<footer class="footer">
+				<div class="footer-content">
+					<div class="footer-left">
+						<img
+							class="logo-footer"
+							src="imagenes/logosinnombre.png"
+							alt="Logo"
+						/>
+						<span class="footer-title">Q'comemos</span>
+						<p class="footer-description">
+							Busca exactamente lo que deseas y encontraremos los mejores
+							lugares para vos.
+						</p>
+					</div>
+					<div class="footer-links">
+						<ul>
+							<li><a href="#">Inicio</a></li>
+							<li><a href="#">Favoritos</a></li>
+							<li><a href="#">Promociones</a></li>
+							<li><a href="#">Agregar lugar</a></li>
+							<li><a href="#">Contacto</a></li>
+							<li><a href="#">Quiénes somos</a></li>
+						</ul>
+					</div>
+					<div class="footer-social">
+						<p>Seguinos en Instagram</p>
+						<img class="social-icon" src="imagenes/ig.png" alt="Instagram" />
+					</div>
+				</div>
+			</footer>
+		</div>
 
-            <!-- Caja para añadir reseña -->
-            <div class="comment-box">
-                <h4>Escribí tu reseña</h4>
-                <textarea id="userComment" rows="4" placeholder="Escribí tu reseña aquí"></textarea>
-                <button id="submitComment">Enviar</button>
-            </div>
-        </div>
-    </div>
-
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="footer-content">
-                    <div class="footer-left">
-                        <img class="logo-footer" src="imagenes/logosinnombre.png" alt="Logo">
-                        <span class="footer-title">Q'comemos</span>
-                        <p class="footer-description">Busca exactamente lo que deseas y encontraremos los mejores lugares
-                            para vos.</p>
-                    </div>
-                    <div class="footer-links">
-                        <ul>
-                            <li><a href="#">Inicio</a></li>
-                            <li><a href="#">Favoritos</a></li>
-                            <li><a href="#">Promociones</a></li>
-                            <li><a href="#">Agregar lugar</a></li>
-                            <li><a href="#">Contacto</a></li>
-                            <li><a href="#">Quiénes somos</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-social">
-                        <p>Seguinos en Instagram</p>
-                        <img class="social-icon" src="imagenes/ig.png" alt="Instagram">
-                    </div>
-                </div>
-            </footer>
-        </div>
-
-        <script src="js/scripts.js"></script>
-    </body>
-
-    </html>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
