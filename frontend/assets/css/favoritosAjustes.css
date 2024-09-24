@@ -1,0 +1,159 @@
+/* General */
+body {
+    background-image: url('imagenes/pexels-pixabay-326281.jpg'); /* Cambia 'fondo.jpg' por tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif; /* Aplica Poppins a todo el documento */
+  }
+  
+  .poppins-thin {
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .profile-container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #DBDFD0;
+  }
+  
+  .app-logo {
+    width: 80px;
+  }
+  
+  .inicio-btn {
+    background-color: #F97A03;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  .inicio-btn:hover {
+    background-color: #74CA04;
+    color: #2C2F24;
+  }
+  
+  /* Profile Section */
+  .profile-section h2 {
+    text-align: center;
+    color: #F97A03;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #F97A03;
+  }
+  
+  .change-pic-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #F97A03;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .change-pic-btn:hover {
+    background-color: #DBDFD0;
+    color: #2C2F24;
+  }
+  
+  .profile-info {
+    text-align: center;
+    font-size: large;
+    font-family: "Poppins", sans-serif; /* Aplica Poppins a la información del perfil */
+    margin-top: 20px;
+  }
+  
+  /* Settings Section */
+  .settings-section h3 {
+    color: #F97A03;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para acordeones */
+  .accordion-button {
+    background-color: #F97A03;
+    color: white;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordion-button:hover {
+    background-color: #74CA04;
+  }
+  
+  /* Contenido del acordeón */
+  .accordion-content {
+    display: none; /* Oculto por defecto */
+    padding: 10px;
+    border: 1px solid #DBDFD0;
+    border-radius: 8px;
+    margin-top: 5px;
+  }
+  
+  /* Estilo de etiquetas en el formulario */
+  form label {
+    display: block; /* Cada etiqueta ocupa una línea */
+    margin-top: 10px; /* Espacio entre la etiqueta y el campo */
+  }
+  
+  /* Favorite Section */
+  .favorite-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .favorite-btn {
+    background-color: #8dc540;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .favorite-btn .star {
+    color: yellow;
+    margin-right: 8px;
+  }
+  
+  .favorite-btn:hover {
+    background-color: #DBDFD0;
+    color: #2C2F24;
+  }
