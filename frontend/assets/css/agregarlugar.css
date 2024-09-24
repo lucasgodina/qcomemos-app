@@ -1,0 +1,110 @@
+.add-place-section {
+    width: 50%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1.5px solid #DBDFD0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos del formulario */
+}
+
+.add-place-section h2 {
+    color: #F97A03;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    width: 100%; /* Asegura que las cajas ocupen el 100% del contenedor */
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #2C2F24;
+    margin-bottom: 5px;
+    text-align: left; /* Alinea las etiquetas a la izquierda */
+}
+
+input[type="text"], textarea, input[type="file"] {
+    width: 100%;
+    padding: 15px; /* Aumenta el padding para hacer más grandes las cajas */
+    border: 1px solid #DBDFD0;
+    border-radius: 8px;
+    background-color: #f9f9f7;
+    font-size: 16px; /* Aumenta el tamaño de fuente para mejorar la legibilidad */
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #F97A03;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #DBDFD0;
+    color: #2C2F24;
+}
+
+/* Imagen de fondo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('imagenes/pexels-dilara-albamya-59969382-12575823.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Botón de Inicio */
+.header-right .button {
+    background-color: #F97A03;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.header-right .button:hover {
+    background-color: #DBDFD0;
+    color: #2C2F24;
+}
+
+/* Estilos para el logo y el título */
+.header-left {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el logo y el título */
+    justify-content: center; /* Alinea horizontalmente el logo y el título */
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 80px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-right: 10px; /* Espacio entre el logo y el título */
+}
+
+.title-logo {
+    font-size: 24px;
+    color: #F97A03; /* Color del título */
+    font-weight: bold;
+}
+
+/* Ajuste adicional para asegurar que el formulario esté centrado */
+.add-place-section {
+    text-align: center;
+}
