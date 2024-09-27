@@ -1,135 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Q'comemos - Home</title>
-		<link rel="stylesheet" href="/frontend/assets/css/home.css" />
-	</head>
-	<body>
-		<div class="home-container">
-			<!-- Header con el logo, título, y los botones de navegación -->
-			<header class="header">
-				<div class="top-bar">
-					<div class="left-info">
-						<img
-							class="logo"
-							src="/frontend/assets/img/logosinnombre.png"
-							alt="Logo Q'comemos"
-						/>
-						<span class="title-logo">Q'comemos</span>
-					</div>
-					<div class="nav-buttons">
-						<a href="/frontend/login.html" class="button">Iniciar sesión</a>
-						<a href="/frontend/register.html" class="button">Registrarse</a>
-					</div>
-				</div>
-				<nav class="menu-nav">
-					<a href="/frontend/home.html" class="nav-link">Inicio</a>
-					<a href="favoritosAjustes.html" class="nav-link">Perfil</a>
-					<a href="#" class="nav-link">Promociones</a>
-					<a href="#" class="nav-link">Quiénes somos</a>
-				</nav>
-			</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q'comemos - Home</title>
+    <link rel="stylesheet" href="home.css">
+    
+</head>
+<body>
+    <div class="home-container">
 
-			<!-- Sección de fondo -->
-			<div class="hero">
-				<img
-					class="hero-image"
-					src="/frontend/assets/img/FONDO.jpg"
-					alt="Imagen principal"
-				/>
-				<div class="hero-content">
-					<h1 class="hero-title">¡Encuentra tu próximo lugar favorito!</h1>
-					<div class="hero-buttons">
-						<a href="/frontend/lugares.html" class="button">Explorar lugares</a>
-						<a href="/frontend/formulario_sugestion.html" class="button"
-							>Sugerir lugares</a
-						>
-					</div>
-				</div>
-			</div>
+        <!-- Header con el logo, título, y los botones de navegación -->
+        <header class="header">
+            <div class="top-bar">
+                <div class="left-info">
+                    <img class="logo" src="imagenes/logosinnombre.png" alt="Logo Q'comemos">
+                    <span class="title-logo">Q'comemos</span>
+                </div>
+                <div class="nav-buttons" id="nav-buttons">
+                    <!-- Aquí irán los botones de inicio de sesión o el perfil del usuario -->
+                    <a href="login.html" class="button" id="login-button">Iniciar sesión</a>
+                    <a href="registro.html" class="button" id="register-button">Registrarse</a>
+                </div>
+            </div>
+            <nav class="menu-nav">
+                <a href="#" class="nav-link">Inicio</a>
+                <a href="favoritosAjustes.html" class="nav-link">Perfil</a>
+                <a href="#" class="nav-link">Promociones</a>
+                <a href="#" class="nav-link">Quiénes somos</a>
+            </nav>
+        </header>
 
-			<!-- Sección del menú con imágenes encima de las opciones -->
-			<div class="menu-section">
-				<div class="menu-title">¡Los mejores lugares!</div>
-				<div class="menu-cards">
-					<div class="card">
-						<img
-							class="icon-image"
-							src="/frontend/assets/img/logo desayuno.png"
-							alt="Icono desayuno"
-						/>
-						<h3 class="card-title">Desayuno</h3>
-						<p class="card-description">
-							Comienza el día con energía en los mejores cafés.
-						</p>
-						<button class="explore-button">Explorar</button>
-					</div>
-					<div class="card">
-						<img
-							class="icon-image"
-							src="/frontend/assets/img/logo plato principal.png"
-							alt="Icono platos principales"
-						/>
-						<h3 class="card-title">Platos principales</h3>
-						<p class="card-description">
-							Saborea las especialidades más deliciosas en cada bocado.
-						</p>
-						<button class="explore-button">Explorar</button>
-					</div>
-					<div class="card">
-						<img
-							class="icon-image"
-							src="/frontend/assets/img/logo tragos.png"
-							alt="Icono tragos"
-						/>
-						<h3 class="card-title">Tragos</h3>
-						<p class="card-description">
-							Los mejores bares para disfrutar de una bebida especial.
-						</p>
-						<button class="explore-button">Explorar</button>
-					</div>
-					<div class="card">
-						<img
-							class="icon-image"
-							src="/frontend/assets/img/logo dulce.png"
-							alt="Icono dulce"
-						/>
-						<h3 class="card-title">Dulce</h3>
-						<p class="card-description">
-							Deléitate con los postres más irresistibles de la ciudad.
-						</p>
-						<button class="explore-button">Explorar</button>
-					</div>
-				</div>
-			</div>
+        <!-- Sección de fondo -->
+        <div class="hero">
+            <img class="hero-image" src="imagenes/FONDO.jpg" alt="Imagen principal">
+            <div class="hero-content">
+                <h1 class="hero-title">¡Encuentra tu próximo lugar favorito!</h1>
+                <div class="hero-buttons">
+                    <button class="explore-button" onclick="location.href='lugares.html'">Explorar lugares</button>
+                    <button class="add-button" onclick="location.href='agregarlugar.html'">Agregar lugares</button>
+                </div>
+            </div>
+        </div>
 
-			<!-- Footer con logo, título y espacio para iconos sociales -->
-			<footer class="footer">
-				<div class="footer-content">
-					<div class="footer-left">
-						<img
-							class="logo-footer"
-							src="/frontend/assets/img/logosinnombre.png"
-							alt="Logo"
-						/>
-						<span class="footer-title">Q'comemos</span>
-					</div>
-					<div class="footer-description">
-						Busca exactamente lo que deseas y encontraremos los mejores lugares
-						para vos.
-					</div>
-					<div class="social-icons">
-						<img
-							class="social-icon"
-							src="/frontend/assets/img/ig.png"
-							alt="Instagram"
-						/>
-						<!-- Agregar más iconos si es necesario -->
-					</div>
-				</div>
-			</footer>
-		</div>
-	</body>
+        <!-- Sección del menú con imágenes encima de las opciones -->
+        <div class="menu-section">
+            <div class="menu-title">¡Los mejores lugares!</div>
+            <div class="menu-cards">
+                <div class="card">
+                    <img class="icon-image" src="imagenes/logo desayuno.png" alt="Icono desayuno">
+                    <h3 class="card-title">Desayuno</h3>
+                    <p class="card-description">Comienza el día con energía en los mejores cafés.</p>
+                    <button class="explore-button" onclick="location.href='lugares.html'">Explorar</button> 
+                </div>
+                <div class="card">
+                    <img class="icon-image" src="imagenes/logo plato principal.png" alt="Icono platos principales">
+                    <h3 class="card-title">Platos principales</h3>
+                    <p class="card-description">Saborea las especialidades más deliciosas en cada bocado.</p>
+                    <button class="explore-button" onclick="location.href='lugares.html'">Explorar</button>
+                </div>
+                <div class="card">
+                    <img class="icon-image" src="imagenes/logo tragos.png" alt="Icono tragos">
+                    <h3 class="card-title">Tragos</h3>
+                    <p class="card-description">Los mejores bares para disfrutar de una bebida especial.</p>
+                    <button class="explore-button" onclick="location.href='lugares.html'">Explorar</button>
+                </div>
+                <div class="card">
+                    <img class="icon-image" src="imagenes/logo dulce.png" alt="Icono dulce">
+                    <h3 class="card-title">Dulce</h3>
+                    <p class="card-description">Deléitate con los postres más irresistibles de la ciudad.</p>
+                    <button class="explore-button" onclick="location.href='lugares.html'">Explorar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer con logo, título y espacio para iconos sociales -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <img class="logo-footer" src="imagenes/logosinnombre.png" alt="Logo">
+                    <span class="footer-title">Q'comemos</span>
+                </div>
+                <div class="footer-description">
+                    Busca exactamente lo que deseas y encontraremos los mejores lugares para vos.
+                </div>
+                <div class="social-icons">
+                    <img class="social-icon" src="imagenes/ig.png" alt="Instagram">
+                    <!-- Agregar más iconos si es necesario -->
+                </div>
+                <!-- Botón de Cerrar Sesión -->
+                <button id="logout-button" class="logout-button" onclick="cerrarSesion()">Cerrar sesión</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/home.js"></script>
+</body>
 </html>
