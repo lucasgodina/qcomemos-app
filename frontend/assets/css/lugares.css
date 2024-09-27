@@ -207,6 +207,7 @@ body {
     height: auto;
     margin-top: 10px;
 }
+
 .places-section-scroll {
     display: flex;
     overflow-x: auto;
@@ -269,7 +270,6 @@ body {
     object-fit: cover; /* Asegura que las imágenes se ajusten correctamente */
 }
 
-
 .close {
     position: absolute;
     top: 10px;
@@ -278,12 +278,75 @@ body {
     cursor: pointer;
 }
 
+/* Caja de reseñas */
 .reviews {
     margin-top: 20px;
     padding: 10px;
-    border: 1px solid #DBDFD0; /* Añade un borde a la caja de reseñas */
+    border: 1px solid #DBDFD0;
     border-radius: 8px;
-    background-color: #f9f9f7; /* Fondo para diferenciar */
+    background-color: #f9f9f7;
+}
+
+/* Estilo para reseñas destacadas */
+.featured-reviews {
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.featured-reviews .review-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #DBDFD0;
+    padding-bottom: 10px;
+}
+
+.review-item {
+    margin-bottom: 15px;
+}
+
+.review-rating {
+    color: #F97A03;
+    font-size: 14px;
+}
+
+/* Estilo para el sistema de calificación con estrellas */
+.rating-system {
+    margin-bottom: 10px;
+}
+
+.star-rating {
+    display: flex;
+    gap: 5px;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating i {
+    color: #F97A03;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.star-rating i:hover,
+.star-rating input:checked ~ i {
+    color: #FFD700;
+}
+
+/* Botón de cargar más reseñas */
+.loadMoreReviews {
+    background-color: #F97A03;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.loadMoreReviews:hover {
+    background-color: #74CA04;
 }
 
 textarea {
@@ -304,10 +367,24 @@ button {
 }
 
 #commentsList {
-    margin-top: 10px; /* Espacio encima de la lista */
+    margin-top: 10px;
 }
 
 #commentsList p {
-    color: #2C2F24; /* Color del texto */
-    margin: 5px 0; 
+    color: #2C2F24;
+    margin: 5px 0;
+}
+
+.favorites-button {
+    background-color: #F97A03;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.favorites-button:hover {
+    background-color: #e66d00;
 }
