@@ -53,6 +53,33 @@ body {
     background-color: #DBDFD0;
 }
 
+/* Navbar para Mis Favoritos y Inicio */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Para alinear los botones */
+    align-items: center;
+    padding: 10px 20px; /* Ajusta el padding según tu diseño */
+}
+
+.favoritos-btn {
+    margin: 0 10px; /* Centra el botón "Mis Favoritos" */
+    background-color: #F97A03; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.inicio-btn {
+    background-color: #F97A03; /* Color de fondo para el botón de Inicio */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -208,13 +235,7 @@ body {
     margin-top: 10px;
 }
 
-.places-section-scroll {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 20px 0;
-}
-
+/* Sección de Lugares en Scroll */
 .places-section-scroll {
     display: flex;
     overflow-x: auto; /* Permite desplazamiento horizontal */
@@ -230,13 +251,6 @@ body {
     text-align: center;
     padding: 20px;
     margin-bottom: 20px;
-}
-
-.place-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
 }
 
 /* Estilo para el modal */
@@ -357,7 +371,7 @@ textarea {
     resize: none;
 }
 
-button {
+.add-favorites {
     background-color: #F97A03;
     color: white;
     padding: 10px;
@@ -371,20 +385,6 @@ button {
 }
 
 #commentsList p {
-    color: #2C2F24;
-    margin: 5px 0;
-}
-
-.favorites-button {
-    background-color: #F97A03;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.favorites-button:hover {
-    background-color: #e66d00;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
 }
