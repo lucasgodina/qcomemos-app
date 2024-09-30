@@ -15,9 +15,20 @@
                 <img class="logo" src="imagenes/logosinnombre.png" alt="Logo Q'comemos">
                 <span class="title-logo">Q'comemos</span>
             </div>
-            <div class="header-right">
-                <a href="home.html" class="button">Inicio</a>
+            <div class="navbar">
+                <!-- Botón "Mis Favoritos" -->
+                <button id="mis-favoritos" class="favoritos-btn">
+                    ⭐ Mis Favoritos
+                </button>
+
+
+                <button id="inicio" class="inicio-btn" onclick="location.href='home.html'">
+                    Inicio
+                </button>
+
             </div>
+
+
         </header>
 
         <div class="hero">
@@ -37,35 +48,77 @@
         </div>
 
         <div class="places-section-scroll">
-            <div class="place-card" id="elJardinCard">
+            <div class="place-card" id="elJardinCard" data-category="cena">
                 <img src="imagenes/eljardin.jfif" alt="Imagen lugar" class="place-image" id="eljardin">
                 <h3 class="place-title">El Jardín</h3>
                 <p class="place-address">Juncal 121, Ituzaingó, Prov. Buenos Aires</p>
-                <button class="favorites-button" data-lugar="El Jardín">Agregar a Favoritos</button>
+                <button class="add-favorites" data-lugar="El Jardín">Agregar a Favoritos</button>
             </div>
-            <div class="place-card" id="elBodegonCard">
+            <div class="place-card" id="elBodegonCard" data-category="almuerzo">
                 <img src="imagenes/elbodegon.jfif" alt="Imagen lugar" class="place-image" id="elbodegon">
                 <h3 class="place-title">El Bodegón</h3>
                 <p class="place-address">Gral. Miguel Soler 494, Ituzaingó, Buenos Aires</p>
-                <button class="favorites-button" data-lugar="El Bodegón">Agregar a Favoritos</button>
+                <button class="add-favorites" data-lugar="El Bodegón">Agregar a Favoritos</button>
             </div>
-            <div class="place-card">
+            <div class="place-card" id="juanaBarCard" data-category="almuerzo">
                 <img src="imagenes/juanabar.jpg" alt="Imagen lugar" class="place-image">
                 <h3 class="place-title">Juana Bar</h3>
                 <p class="place-address">Belgrano 21489, Ituzaingó, Buenos Aires</p>
-                <button class="favorites-button" data-lugar="Juana Bar">Agregar a Favoritos</button>
+                <button class="add-favorites" data-lugar="Juana Bar">Agregar a Favoritos</button>
             </div>
-            <div class="place-card">
+            <div class="place-card" id="laIntendenciaCard" data-category="cena">
                 <img src="imagenes/la-esquina-due.jpg" alt="Imagen lugar" class="place-image">
                 <h3 class="place-title">La Intendencia</h3>
                 <p class="place-address">Gral. Las Heras 101, Ituzaingó, Buenos Aires</p>
-                <button class="favorites-button" data-lugar="La Intendencia">Agregar a Favoritos</button>
+                <button class="add-favorites" data-lugar="La Intendencia">Agregar a Favoritos</button>
             </div>
-            <div class="place-card">
+            <div class="place-card" id="pentosCard" data-category="almuerzo">
                 <img src="imagenes/pentos.jpg" alt="Imagen lugar" class="place-image">
                 <h3 class="place-title">Pentos</h3>
-                <p class="place-address">Av.Rivadavia 21598, Ituzaingó, Buenos Aires</p>
-                <button class="favorites-button" data-lugar="Pentos">Agregar a Favoritos</button>
+                <p class="place-address">Av. Rivadavia 21598, Ituzaingó, Buenos Aires</p>
+                <button class="add-favorites" data-lugar="Pentos">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="santaiSushiCard" data-category="cena">
+                <img src="imagenes/santai sushi.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Santai Sushi</h3>
+                <p class="place-address">Camacuá 289, Ituzaingó, Buenos Aires</p>
+                <button class="add-favorites" data-lugar="Santai Sushi">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="laFarolaCard" data-category="cena">
+                <img src="imagenes/lafarola.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">La Farola</h3>
+                <p class="place-address">Manuel Rodríguez Fragio 94, Ituzaingó, Buenos Aires</p>
+                <button class="add-favorites" data-lugar="La Farola">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="cafeMartinezCard" data-category="desayuno">
+                <img src="imagenes/cafe martinez.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Cafe Martinez</h3>
+                <p class="place-address">Gral. Mansilla 914, Ituzaingó, Buenos Aires</p>
+                <button class="add-favorites" data-lugar="Cafe Martinez">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="ardenteCard" data-category="cena">
+                <img src="imagenes/ardente.png" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Ardente Pizzeria</h3>
+                <p class="place-address">Gral. Mansilla 733, Ituzaingó, Buenos Aires</p>
+                <button class="add-favorites" data-lugar="Ardente Pizzeria">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="piersCard" data-category="desayuno">
+                <img src="imagenes/piers.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Pier's</h3>
+                <p class="place-address">Camacuá 299, Ituzaingó, Buenos Aires</p>
+                <button class="add-favorites" data-lugar="Pier's">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="tostadoCard" data-category="desayuno">
+                <img src="imagenes/tostados.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Tostado</h3>
+                <p class="place-address">Juncal 191, Ituzaingó, Provincia de Buenos Aires</p>
+                <button class="add-favorites" data-lugar="Tostado">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="memeiCard" data-category="desayuno">
+                <img src="imagenes/memei.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Memei</h3>
+                <p class="place-address">Gral. Félix Olazábal 683, Ituzaingó, Buenos Aires</p>
+                <button class="add-favorites" data-lugar="Memei">Agregar a Favoritos</button>
             </div>
         </div>
 
@@ -89,6 +142,7 @@
                     <button id="loadMoreReviewsElJardin" class="loadMoreReviews">Cargar más reseñas</button>
                 </div>
                 <div class="comment-box">
+
                     <h4>Escribí tu reseña</h4>
                     <div class="rating-system">
                         <label>Puntuación: </label>
@@ -153,8 +207,8 @@
         </div>
 
 
-         <!-- Footer con logo, título y espacio para iconos sociales -->
-         <footer class="footer">
+        <!-- Footer con logo, título y espacio para iconos sociales -->
+        <footer class="footer">
             <div class="footer-content">
                 <div class="footer-left">
                     <img class="logo-footer" src="imagenes/logosinnombre.png" alt="Logo">
@@ -173,4 +227,5 @@
 
     <script src="js/lugares.js"></script>
 </body>
+
 </html>
