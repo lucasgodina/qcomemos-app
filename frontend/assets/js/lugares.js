@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Obtener elementos para El Jardín
     const modalElJardin = document.getElementById("modalElJardin");
-    const imgElJardin = document.getElementById("eljardin"); 
+    const imgElJardin = document.getElementById("eljardin");
     const spanElJardin = modalElJardin?.querySelector(".close");
     const commentBoxJardin = document.getElementById("userCommentElJardin");
     const submitCommentJardin = document.getElementById("submitCommentElJardin");
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Abrir el modal de El Jardín
     imgElJardin?.addEventListener("click", function () {
         modalElJardin.style.display = "block";
-        displayExampleReviewsJardin(); // Mostrar reseñas precargadas al abrir el modal
+        displayExampleReviews(reviewsElJardin, exampleReviewsJardin); // Mostrar reseñas precargadas
     });
 
     // Cerrar el modal de El Jardín
@@ -52,6 +52,10 @@ document.addEventListener('DOMContentLoaded', function () {
             alert("Por favor, escribe tu reseña.");
             return;
         }
+        if (ratingValue === null) {
+            alert("Por favor, selecciona una calificación.");
+            return;
+        }
         const reviewElement = document.createElement("p");
         reviewElement.textContent = `Tú: ${userComment} (Calificación: ${ratingValue})`;
         commentsListJardin.appendChild(reviewElement);
@@ -62,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Abrir el modal de El Bodegón
     imgElBodegon?.addEventListener("click", function () {
         modalElBodegon.style.display = "block";
-        displayExampleReviewsBodegon(); // Mostrar reseñas precargadas al abrir el modal
+        displayExampleReviews(reviewsElBodegon, exampleReviewsBodegon); // Mostrar reseñas precargadas
     });
 
     // Cerrar el modal de El Bodegón
@@ -77,6 +81,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const ratingValue = getSelectedRating(ratingStarsBodegon);
         if (userComment.trim() === "") {
             alert("Por favor, escribe tu reseña.");
+            return;
+        }
+        if (ratingValue === null) {
+            alert("Por favor, selecciona una calificación.");
             return;
         }
         const reviewElement = document.createElement("p");
@@ -103,37 +111,27 @@ document.addEventListener('DOMContentLoaded', function () {
         commentsList.innerHTML = ""; // Limpiar las reseñas enviadas
     }
 
+    // Mostrar reseñas precargadas de forma genérica
+    function displayExampleReviews(reviewsArray, exampleReviewsContainer) {
+        exampleReviewsContainer.innerHTML = ""; // Limpiar las reseñas anteriores
+        reviewsArray.forEach(review => {
+            const reviewElement = document.createElement("p");
+            reviewElement.textContent = review;
+            exampleReviewsContainer.appendChild(reviewElement);
+        });
+    }
+
     // Reseñas de ejemplo para El Jardín
     const reviewsElJardin = [
         "Pablo: ¡Increíble experiencia! La comida estaba deliciosa.",
         "Julio: Un lugar mágico, perfecto para una cena romántica.",
     ];
 
-    // Mostrar reseñas precargadas para El Jardín
-    function displayExampleReviewsJardin() {
-        exampleReviewsJardin.innerHTML = ""; // Limpiar las reseñas anteriores
-        reviewsElJardin.forEach(review => {
-            const reviewElement = document.createElement("p");
-            reviewElement.textContent = review;
-            exampleReviewsJardin.appendChild(reviewElement);
-        });
-    }
-
     // Reseñas de ejemplo para El Bodegón
     const reviewsElBodegon = [
         "María: Un ambiente acogedor y comida exquisita.",
         "Carlos: Ideal para salir con amigos, lo recomiendo.",
     ];
-
-    // Mostrar reseñas precargadas para El Bodegón
-    function displayExampleReviewsBodegon() {
-        exampleReviewsBodegon.innerHTML = ""; // Limpiar las reseñas anteriores
-        reviewsElBodegon.forEach(review => {
-            const reviewElement = document.createElement("p");
-            reviewElement.textContent = review;
-            exampleReviewsBodegon.appendChild(reviewElement);
-        });
-    }
 
     // Añadir eventos de hover para las estrellas
     addStarHoverEvents(ratingStarsJardin);
@@ -155,6 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Seleccionar una estrella (click)
             input.addEventListener('click', function () {
                 selectStars(index, ratingStars);
+                updateStarsDisplay(ratingStars, index + 1); // Actualizar las estrellas visualmente
             });
         });
     }
@@ -188,4 +187,38 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // Actualizar las estrellas visualmente cuando el usuario selecciona una calificación
+    function updateStarsDisplay(ratingStars, ratingValue) {
+        ratingStars.forEach((input, index) => {
+            const starIcon = input.nextElementSibling;
+            if (index < ratingValue) {
+                starIcon.classList.add('selected');
+            } else {
+                starIcon.classList.remove('selected');
+            }
+        });
+    }
+
+    // Filtrado
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const places = document.querySelectorAll('.place-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const filter = this.textContent.toLowerCase(); // Obtiene el texto del botón
+
+            places.forEach(place => {
+                const category = place.getAttribute('data-category');
+
+                // Si se selecciona "Todo" o si el lugar coincide con la categoría seleccionada, se muestra
+                if (filter === 'todo' || category === filter) {
+                    place.style.display = 'block'; // Muestra el lugar
+                } else {
+                    place.style.display = 'none';  // Oculta el lugar
+                }
+            });
+        });
+    });
+
 });
