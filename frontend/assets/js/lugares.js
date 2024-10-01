@@ -200,6 +200,95 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+// Función para agregar a favoritos
+    function addToFavorites(placeName, placeAddress, placeImage) {
+        const favoritePlaces = JSON.parse(localStorage.getItem('favoritePlaces')) || [];
+        const isAlreadyFavorite = favoritePlaces.some(place => place.name === placeName);
+        if (isAlreadyFavorite) {
+            alert("Este lugar ya está en tu lista de favoritos.");
+            return;
+        }
+        // Agregar lugar a la lista de favoritos
+        favoritePlaces.push({ name: placeName, address: placeAddress, image: placeImage });
+        localStorage.setItem('favoritePlaces', JSON.stringify(favoritePlaces));
+        alert(`${placeName} ha sido agregado a tus favoritos.`);
+    }
+
+    // Obtener los botones de "Agregar a favoritos"
+    const addToFavoritesButtons = document.querySelectorAll('.add-to-favorites');
+    addToFavoritesButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const placeCard = this.closest('.place-card'); // Accede a la tarjeta del lugar
+            const placeName = placeCard.querySelector('.place-title').innerText;
+            const placeAddress = placeCard.querySelector('.place-address').innerText;
+            const placeImage = placeCard.querySelector('.place-image').src;
+
+            // Llamar a la función para agregar a favoritos
+            addToFavorites(placeName, placeAddress, placeImage);
+        });
+    });
+
+    // Referencia al botón y modal de favoritos
+    const showFavoritesButton = document.getElementById('mis-favoritos');
+    const favoritesModal = document.getElementById('favoritesModal');
+    const closeModal = favoritesModal.querySelector('.close');
+    const favoritesList = document.getElementById('favoritesList');
+
+    function displayFavorites() {
+        const favoritePlaces = JSON.parse(localStorage.getItem('favoritePlaces')) || [];
+        favoritesList.innerHTML = '';
+        if (favoritePlaces.length === 0) {
+            favoritesList.innerHTML = '<p>No tienes lugares favoritos aún.</p>';
+        } else {
+            favoritePlaces.forEach((place, index) => {
+                const placeElement = document.createElement('div');
+                placeElement.classList.add('favorite-item');
+                placeElement.innerHTML = `
+                <h3>${place.name}</h3>
+                <p>Dirección: ${place.address}</p>
+                <img src="${place.image}" alt="${place.name}" style="width: 100px;">
+                <button class="remove-favorite" data-index="${index}">Eliminar de favoritos</button>
+            `;
+                favoritesList.appendChild(placeElement);
+            });
+
+            // Funcionalidad para eliminar favoritos
+            document.querySelectorAll('.remove-favorite').forEach(button => {
+                button.addEventListener('click', function () {
+                    const index = this.getAttribute('data-index');
+                    removeFavorite(index);
+                });
+            });
+        }
+    }
+
+    function removeFavorite(index) {
+        let favoritePlaces = JSON.parse(localStorage.getItem('favoritePlaces')) || [];
+        favoritePlaces.splice(index, 1);
+        localStorage.setItem('favoritePlaces', JSON.stringify(favoritePlaces));
+        displayFavorites();
+        alert('El lugar ha sido eliminado de tus favoritos.');
+    }
+
+    // Mostrar modal de favoritos
+    showFavoritesButton.addEventListener('click', function () {
+        displayFavorites();
+        favoritesModal.style.display = 'block';
+    });
+
+    // Cerrar modal de favoritos
+    closeModal.addEventListener('click', function () {
+        favoritesModal.style.display = 'none';
+    });
+
+    // Cerrar modal al hacer clic fuera
+    window.addEventListener('click', function (event) {
+        if (event.target === favoritesModal) {
+            favoritesModal.style.display = 'none';
+        }
+    });
+
+
     // Filtrado
     const filterButtons = document.querySelectorAll('.filter-button');
     const places = document.querySelectorAll('.place-card');
