@@ -132,28 +132,4 @@ body {
     margin-top: 10px; /* Espacio entre la etiqueta y el campo */
   }
   
-  /* Favorite Section */
-  .favorite-section {
-    text-align: center;
-    margin-top: 20px;
-  }
   
-  .favorite-btn {
-    background-color: #8dc540;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .favorite-btn .star {
-    color: yellow;
-    margin-right: 8px;
-  }
-  
-  .favorite-btn:hover {
-    background-color: #DBDFD0;
-    color: #2C2F24;
-  }

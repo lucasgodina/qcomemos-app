@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+   
+
     // Manejo de acordeones para ajustes
     document.querySelectorAll('.accordion-button').forEach(acc => {
         acc.addEventListener('click', function() {
