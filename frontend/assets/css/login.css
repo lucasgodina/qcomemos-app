@@ -1,4 +1,3 @@
-/* CSS */
 * {
     margin: 0;
     padding: 0;
@@ -62,19 +61,62 @@ body {
     font-weight: bold;
 }
 
-.get-started-button {
-    margin-top: 8px;
-    background-color: #74CA04;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
+/* Botón Volver a Inicio */
+.data-container {
+    background: #474747;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.get-started-button:hover {
-    background-color: #F97A03;
+.btn {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 15px;
+    background: #F97A03; /* Color inicial */
+    color: white;
+    font-size: 16px; /* Ajuste de tamaño */
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all 1s; /* Mantener la duración de 1s */
+    font-weight: bold;
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+.btn:after,
+.btn:before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border: 0px solid #fff;
+    transition: all 1s; /* Mantener la duración de 1s */
+}
+
+.btn:after {
+    top: -1px;
+    left: -1px;
+    border-top: 5px solid #141414;
+    border-left: 5px solid #141414;
+}
+
+.btn:before {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 5px solid #141414;
+    border-right: 5px solid #141414;
+}
+
+.btn:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #74CA04; /* Color en hover */
+}
+
+.btn:hover:before,
+.btn:hover:after {
+    width: 100%;
+    height: 100%;
 }
 
 /* Login Form */
@@ -154,4 +196,3 @@ body {
 .create-account-link:hover {
     text-decoration: underline;
 }
-
