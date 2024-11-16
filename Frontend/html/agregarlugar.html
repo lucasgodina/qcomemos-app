@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="agregarlugar.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Botón de Inicio -->
+    <div class="header-right">
+        <a href="/" class="button">Inicio</a>
+    </div>
+
+
+    <div class="add-place-section">
+        
+        <form class="form-container">
+            <div class="form-header">
+                <!-- Reemplaza 'ruta/a/tu/logo.png' con la ruta real de tu logo -->
+                <img src="imagenes/Q-Comemos.png" alt="Logo" class="logo">
+                <h2 class="form-title">Agregar un nuevo lugar</h2>
+            </div>
+        
+            <!-- Campos del formulario -->
+            <label for="placeName">Nombre del Lugar:</label>
+            <input type="text" id="placeName" name="placeName" required>
+        
+            <label for="address">Dirección:</label>
+            <input type="text" id="address" name="address" required>
+        
+            <label for="photos">Fotos del Lugar:</label>
+            <input type="file" id="photos" name="photos" multiple accept="image/*" required>
+        
+            <label for="description">Descripción:</label>
+            <textarea id="description" name="description" rows="4" placeholder="Describe el lugar"></textarea>
+        
+            <button type="submit" class="submit-button">Enviar formulario</button>
+        </form>
+        
+        <script src="js/agregarLugar.js"></script>
+</body>
+
+</html>

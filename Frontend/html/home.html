@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <title>Q'comemos</title>
+</head>
+
+<body>
+    <div class="home-container">
+        <header class="header">
+            <!-- Contenedor para el título y el logo -->
+            <div class="title-logo-container">
+                <img class="logo" src="imagenes/logosinnombre.png" alt="Logo Q'comemos">
+                <h1 class="main-title">Q'comemos</h1>
+            </div>
+            <div class="top-bar">
+                <div class="nav-container">
+                    <ul>
+                        <li><a href="#" class="nav-link">Inicio</a></li>
+                        <li><a href="favoritosAjustes.html  " class="nav-link">Perfil</a></li>
+                        <li><a href="#" class="nav-link">Acerca de</a></li>
+                        <li><a href="#" class="nav-link">Contacto</a></li>
+                        <li><a href="#" class="nav-link">Equipo</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="auth-buttons">
+                <a href="Login.html" class="login-button">Iniciar Sesión</a>
+                <a href="registro.html" class="register-button">Registrarse</a>
+            </div>
+        </header>
+
+        <!-- Sección de fondo -->
+        <div class="hero">
+            <img class="hero-image" src="imagenes/FONDO.jpg" alt="Imagen principal">
+            <div class="hero-content">
+                <h1 class="hero-title">¡Encuentra tu próximo lugar favorito!</h1>
+                <div class="hero-buttons">
+                    <button class="explore-button" onclick="location.href='lugares.html'">Explorar lugares</button>
+                    <button class="add-button" onclick="location.href='agregarlugar.html'">Agregar lugares</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección del menú con imágenes encima de las opciones -->
+        <div class="menu-section">
+            <div class="menu-title">¡Los mejores lugares!</div>
+            <div class="menu-cards">
+                <div class="card">
+                    <img class="icon-image" src="imagenes/logo desayuno.png" alt="Icono desayuno">
+                    <h3 class="card-title">Desayuno</h3>
+                    <p class="card-description">Comienza el día con energía en los mejores cafés.</p>
+                    <button class="explore-button" onclick="location.href='lugares.html'">Explorar</button>
+                </div>
+                <div class="card">
+                    <img class="icon-image" src="imagenes/logo plato principal.png" alt="Icono platos principales">
+                    <h3 class="card-title">Platos principales</h3>
+                    <p class="card-description">Saborea las especialidades más deliciosas en cada bocado.</p>
+                    <button class="explore-button" onclick="location.href='lugares.html'">Explorar</button>
+                </div>
+                <div class="card">
+                    <img class="icon-image" src="imagenes/logo tragos.png" alt="Icono tragos">
+                    <h3 class="card-title">Tragos</h3>
+                    <p class="card-description">Los mejores bares para disfrutar de una bebida especial.</p>
+                    <button class="explore-button" onclick="location.href='lugares.html'">Explorar</button>
+                </div>
+                <div class="card">
+                    <img class="icon-image" src="imagenes/logo dulce.png" alt="Icono dulce">
+                    <h3 class="card-title">Dulce</h3>
+                    <p class="card-description">Deléitate con los postres más irresistibles de la ciudad.</p>
+                    <button class="explore-button" onclick="location.href='lugares.html'">Explorar</button>
+                </div>
+            </div>
+        </div>
+
+      <!-- Footer con logo, título y espacio para iconos sociales -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <img class="logo-footer" src="imagenes/logosinnombre.png" alt="Logo">
+            <span class="footer-title">Q'comemos</span>
+        </div>
+        <div class="footer-description">
+            Busca exactamente lo que deseas y encontraremos los mejores lugares para vos.
+        </div>
+        <div class="social-icons">
+            <ul id="social-icons-list" class="social-icons-list">
+                <li class="social-icon-item">
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social-icon-item">
+                    <a href="https://www.tiktok.com" target="_blank" class="social-icon-link">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </li>
+                <li class="social-icon-item">
+                    <a href="https://www.linkedin.com" target="_blank" class="social-icon-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Botón de Cerrar Sesión -->
+        <button id="logout-button" class="logout-button" onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+</footer>
+
+
+    <script src="js/home.js"></script>
+</body>
+
+</html>

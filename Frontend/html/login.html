@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Q'comemos</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        // Datos de acceso predefinidos (correo y contraseña válidos)
+        const correoValido = "usuario@qcomemos.com";
+        const contrasenaValida = "contrasena123";
+
+        // Simulación de inicio de sesión
+        function iniciarSesion() {
+            const emailUsuario = document.getElementById("email").value;
+            const contrasenaUsuario = document.getElementById("password").value;
+            const mensajeError = document.getElementById("error-message");
+
+            // Verificar si el correo y la contraseña son correctos
+            if (emailUsuario === correoValido && contrasenaUsuario === contrasenaValida) {
+                const nombreUsuario = "Usuario"; // Puedes personalizar este valor
+                const fotoUsuario = "imagenes/default-user.png"; // Imagen de perfil por defecto
+
+                // Simulación de guardar los datos de usuario en localStorage
+                const usuario = {
+                    nombre: nombreUsuario,
+                    email: emailUsuario,
+                    foto: fotoUsuario // Asegúrate de que esto sea correcto
+                };
+
+                localStorage.setItem('usuario', JSON.stringify(usuario));
+
+                // Redirigir al usuario a la página de inicio
+                window.location.href = "home.html";
+            } else {
+                // Mostrar mensaje de error si los datos no coinciden
+                mensajeError.textContent = "Correo o contraseña incorrectos. Por favor, intenta nuevamente.";
+                mensajeError.style.display = "block"; // Mostrar el mensaje de error
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <header class="header">
+            <div class="top-bar">
+                <div class="info">
+                    <div class="call">
+                        <span class="icon">📞</span>
+                        <span class="phone-number">11 - 5025 - 2573</span>
+                    </div>
+                    <div class="mail">
+                        <span class="icon">📧</span>
+                        <span class="email">qcomemos@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-content">
+                <img class="logo" src="imagenes/logosinnombre.png" alt="Logo Q'comemos">
+                <div class="title-logo">Q'comemos</div>
+                <div class="data-container">
+                    <a href="/" class="btn">Volver a inicio</a>
+                </div>                
+                
+        </header>
+
+        <div class="login-form">
+            <img class="form-image" src="imagenes/pexels-bemistermister-3434523.jpg" alt="Form Image">
+            <div class="form-content">
+                <h2 class="login-title">Iniciar sesión</h2>
+
+                <label for="email" class="label">Email</label>
+                <input type="email" id="email" class="input-field input-email" placeholder="Ingrese su email" required>
+
+                <label for="password" class="label">Contraseña</label>
+                <input type="password" id="password" class="input-field input-password" placeholder="Ingrese su contraseña" required>
+
+                <!-- Mensaje de error oculto -->
+                <p id="error-message" style="color: red; display: none;"></p>
+
+                <!-- Cambiamos el botón para que llame a la función de inicio de sesión -->
+                <button class="login-button" onclick="iniciarSesion()">Ingresar</button>
+
+                <div class="create-account">
+                    <span class="no-account">¿No tenés cuenta?</span>
+                    <a href="registro.html" class="create-account-link">Crear cuenta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

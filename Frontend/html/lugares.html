@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugares - Q'comemos</title>
+    <link rel="stylesheet" href="lugares.css">
+</head>
+
+<body>
+    <div class="lugares-container">
+        <header class="header">
+            <div class="header-left">
+                <img class="logo" src="imagenes/logosinnombre.png" alt="Logo Q'comemos">
+                <span class="title-logo">Q'comemos</span>
+            </div>
+            <div class="navbar">
+                <!-- Botón "Mis Favoritos" -->
+                <button id="mis-favoritos" class="favoritos-btn">
+                    ⭐ Mis Favoritos
+                </button>
+        
+                <div id="favoritesModal" class="modal-favoritos">
+                    <div class="modal-favoritos-content">
+                        <span class="close close-favoritos">&times;</span>
+                        <div id="favoritesList"></div>
+                    </div>
+                </div>
+                
+        
+                <!-- Botón "Inicio" -->
+                <button id="inicio" class="inicio-btn" onclick="location.href='/'">
+                    Inicio
+                </button>
+            </div>
+        </header>
+        
+
+        <div class="hero">
+            <img class="hero-image" src="imagenes/pexels-ella-olsson-572949-1640774.jpg" alt="Imagen hero">
+            <div class="hero-content">
+                <h1 class="title">¡Los mejores lugares!</h1>
+                <p class="subtitle">Te dejamos una selección de los mejores lugares de la zona, podrás filtrar y
+                    encontrar el indicado para vos.</p>
+                <div class="filter-buttons">
+                    <button class="filter-button">Todo</button>
+                    <button class="filter-button">Desayuno</button>
+                    <button class="filter-button">Almuerzo</button>
+                    <button class="filter-button">Merienda</button>
+                    <button class="filter-button">Cena</button>
+                    <button class="filter-button">Vegano/Vegeteriano</button> 
+                    <button class="filter-button">Celiaco</button>  
+            </div>
+        </div>
+
+        <div class="places-section-scroll">
+            <div class="place-card" id="elJardinCard" data-category="cena,almuerzo">
+                <img src="imagenes/eljardin.jfif" alt="Imagen lugar" class="place-image" id="eljardin">
+                <h3 class="place-title">El Jardín</h3>
+                <p class="place-address">Juncal 121, Ituzaingó, Prov. Buenos Aires</p>
+                <button class="add-to-favorites" data-lugar="El Jardín">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="elBodegonCard" data-category="cena,almuerzo">
+                <img src="imagenes/elbodegon.jfif" alt="Imagen lugar" class="place-image" id="elbodegon">
+                <h3 class="place-title">El Bodegón</h3>
+                <p class="place-address">Gral. Miguel Soler 494, Ituzaingó, Buenos Aires</p>
+                <button class="add-to-favorites" data-lugar="El Bodegón">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="juanaBarCard" data-category="almuerzo">
+                <img src="imagenes/juanabar.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Juana Bar</h3>
+                <p class="place-address">Belgrano 21489, Ituzaingó, Buenos Aires</p>
+                <button class="add-to-favorites" data-lugar="Juana Bar">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="laIntendenciaCard" data-category="cena">
+                <img src="imagenes/la-esquina-due.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">La Intendencia</h3>
+                <p class="place-address">Gral. Las Heras 101, Ituzaingó, Buenos Aires</p>
+                <button class="add-to-favorites" data-lugar="La Intendencia">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="pentosCard" data-category="almuerzo">
+                <img src="imagenes/pentos.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Pentos</h3>
+                <p class="place-address">Av. Rivadavia 21598, Ituzaingó, Buenos Aires</p>
+                <button class="add-to-favorites" data-lugar="Pentos">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="santaiSushiCard" data-category="cena">
+                <img src="imagenes/santai sushi.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Santai Sushi</h3>
+                <p class="place-address">Camacuá 289, Ituzaingó, Buenos Aires</p>
+                <button class="add-to-favorites" data-lugar="Santai Sushi">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="laFarolaCard" data-category="cena">
+                <img src="imagenes/lafarola.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">La Farola</h3>
+                <p class="place-address">Manuel Rodríguez Fragio 94, Ituzaingó, Buenos Aires</p>
+                <button class="add-to-favorites" data-lugar="La Farola">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="cafeMartinezCard" data-category="desayuno">
+                <img src="imagenes/cafe martinez.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Cafe Martinez</h3>
+                <p class="place-address">Gral. Mansilla 914, Ituzaingó, Buenos Aires</p>
+                <button class="add-to-favorites" data-lugar="Cafe Martinez">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="ardenteCard" data-category="cena">
+                <img src="imagenes/ardente.png" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Ardente Pizzeria</h3>
+                <p class="place-address">Gral. Mansilla 733, Ituzaingó, Buenos Aires</p>
+                <button class="add-to-favorites" data-lugar="Ardente Pizzeria">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="piersCard" data-category="desayuno">
+                <img src="imagenes/piers.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Pier's</h3>
+                <p class="place-address">Camacuá 299, Ituzaingó, Buenos Aires</p>
+                <button class="add-to-favorites" data-lugar="Pier's">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="tostadoCard" data-category="desayuno">
+                <img src="imagenes/tostados.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Tostado</h3>
+                <p class="place-address">Juncal 191, Ituzaingó, Provincia de Buenos Aires</p>
+                <button class="add-to-favorites" data-lugar="Tostado">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="memeiCard" data-category="desayuno">
+                <img src="imagenes/memei.jpg" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Memei</h3>
+                <p class="place-address">Gral. Félix Olazábal 683, Ituzaingó, Buenos Aires</p>
+                <button class="add-to-favorites" data-lugar="Memei">Agregar a Favoritos</button>
+            </div>
+            <div class="place-card" id="celiak2Card" data-category="desayuno,cenar,almuerzo,celiaco">
+                <img src="imagenes/celiak2.png" alt="Imagen lugar" class="place-image">
+                <h3 class="place-title">Celiak2</h3>
+                <p class="place-address">Gral. Mansilla 1002, Ituzaingó, Buenos Aires</p>
+                <button class="add-to-favorites" data-lugar="Celiak2">Agregar a Favoritos</button>
+            </div>
+        </div>
+
+        <!-- Modal para El Jardín -->
+        <div id="modalElJardin" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModalElJardin">&times;</span>
+                <h3 class="modal-title" style="color: #F97A03;">El Jardín</h3>
+                <p class="modal-address">Juncal 121, Ituzaingó, Buenos Aires</p>
+                <p class="modal-description">Un lugar encantador rodeado de naturaleza, ideal para disfrutar de una
+                    comida al aire libre.</p>
+                <div class="modal-images">
+                    <img src="imagenes/el jardin foto 1.png" alt="Comida 1" class="modal-image">
+                    <img src="imagenes/el jardin foto 2.png" alt="Comida 2" class="modal-image">
+                    <img src="imagenes/el jardin foto 3.png" alt="Comida 3" class="modal-image">
+                </div>
+                <div class="reviews">
+                    <h4>Reseñas de usuarios</h4>
+                    <div id="exampleReviewsElJardin"></div>
+                    <div id="commentsListElJardin"></div>
+                    <button id="loadMoreReviewsElJardin" class="loadMoreReviews">Cargar más reseñas</button>
+                </div>
+                <div class="comment-box">
+
+                    <h4>Escribí tu reseña</h4>
+                    <div class="rating-system">
+                        <label>Puntuación: </label>
+                        <span class="star-rating">
+                            <input type="radio" name="ratingElJardin" value="1" id="star1ElJardin">
+                            <label for="star1ElJardin">★</label>
+                            <input type="radio" name="ratingElJardin" value="2" id="star2ElJardin">
+                            <label for="star2ElJardin">★</label>
+                            <input type="radio" name="ratingElJardin" value="3" id="star3ElJardin">
+                            <label for="star3ElJardin">★</label>
+                            <input type="radio" name="ratingElJardin" value="4" id="star4ElJardin">
+                            <label for="star4ElJardin">★</label>
+                            <input type="radio" name="ratingElJardin" value="5" id="star5ElJardin">
+                            <label for="star5ElJardin">★</label>
+                        </span>
+                    </div>
+                    <textarea id="userCommentElJardin" rows="4" placeholder="Escribí tu reseña aquí..."></textarea>
+                    <button id="submitCommentElJardin">Enviar Reseña</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para El Bodegón -->
+        <div id="modalElBodegon" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModalElBodegon">&times;</span>
+                <h3 class="modal-title" style="color: #F97A03;">El Bodegón</h3>
+                <p class="modal-address">Gral. Miguel Soler 494, Ituzaingó, Buenos Aires</p>
+                <p class="modal-description">Un clásico de la comida local con platos exquisitos.</p>
+                <div class="modal-images">
+                    <img src="imagenes/el bodegon comida 1.png" alt="Comida 1" class="modal-image">
+                    <img src="imagenes/el bodegon comida 2.png" alt="Comida 2" class="modal-image">
+                    <img src="imagenes/el bodegon comida 3.png" alt="Comida 3" class="modal-image">
+                </div>
+                <div class="reviews">
+                    <h4>Reseñas de usuarios</h4>
+                    <div id="exampleReviewsBodegon"></div>
+                    <div id="commentsListBodegon"></div>
+                    <button id="loadMoreReviewsBodegon" class="loadMoreReviews">Cargar más reseñas</button>
+                </div>
+                <div class="comment-box">
+                    <h4>Escribí tu reseña</h4>
+                    <div class="rating-system">
+                        <label>Puntuación: </label>
+                        <span class="star-rating">
+                            <input type="radio" name="ratingElBodegon" value="1" id="star1ElBodegon">
+                            <label for="star1ElBodegon">★</label>
+                            <input type="radio" name="ratingElBodegon" value="2" id="star2ElBodegon">
+                            <label for="star2ElBodegon">★</label>
+                            <input type="radio" name="ratingElBodegon" value="3" id="star3ElBodegon">
+                            <label for="star3ElBodegon">★</label>
+                            <input type="radio" name="ratingElBodegon" value="4" id="star4ElBodegon">
+                            <label for="star4ElBodegon">★</label>
+                            <input type="radio" name="ratingElBodegon" value="5" id="star5ElBodegon">
+                            <label for="star5ElBodegon">★</label>
+                        </span>
+                    </div>
+                    <textarea id="userCommentBodegon" rows="4" placeholder="Escribí tu reseña aquí..."></textarea>
+                    <button id="submitCommentBodegon">Enviar Reseña</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer con logo, título y espacio para iconos sociales -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <img class="logo-footer" src="imagenes/logosinnombre.png" alt="Logo">
+                    <span class="footer-title">Q'comemos</span>
+                </div>
+                <div class="footer-description">
+                    Busca exactamente lo que deseas y encontraremos los mejores lugares para vos.
+                </div>
+                <div class="social-icons">
+                    <img class="social-icon" src="imagenes/ig.png" alt="Instagram">
+                    <!-- Agregar más iconos si es necesario -->
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/lugares.js"></script>
+</body>
+
+</html>

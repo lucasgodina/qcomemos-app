@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="favoritosAjustes.css">
+</head>
+
+<body>
+    <!-- Contenedor del perfil -->
+    <div class="profile-container">
+        <!-- Logo y botón de Inicio -->
+        <div class="header">
+            <img src="imagenes/logosinnombre.png" alt="Logo de la App" class="app-logo">
+            <a href="home.html" class="inicio-btn">Inicio</a>
+
+        </div>
+
+        <!-- Sección del Perfil -->
+        <div class="profile-section">
+            <h2>Perfil de Usuario</h2>
+
+            <!-- Foto de perfil y botón para cambiarla -->
+            <div class="profile-pic-container">
+                <img src="imagenes/avatar.png" alt="Foto de Perfil" class="profile-pic">
+                <button class="change-pic-btn">Cambiar Foto</button>
+            </div>
+
+            <div class="profile-info">
+                <p>Nombre: Juan Pérez</p>
+                <p>Email: juan.perez@email.com</p>
+            </div>
+        </div>
+
+        <!-- Sección de Ajustes -->
+        <div class="settings-section">
+            <h3>Ajustes</h3>
+            <div class="accordion">
+                <button class="accordion-button">Cambiar contraseña</button>
+                <div class="accordion-content" style="display: none;">
+                    <form>
+                        <label for="currentPassword">Contraseña Actual:</label>
+                        <input type="password" id="currentPassword" required>
+
+                        <label for="newPassword">Nueva Contraseña:</label>
+                        <input type="password" id="newPassword" required>
+
+                        <input type="submit" value="Guardar">
+                    </form>
+                </div>
+
+
+                <button class="accordion-button">Notificaciones</button>
+                <div class="accordion-content">
+                    <form>
+                        <label for="notificationSettings">Configuraciones de Notificaciones:</label>
+                        <select id="notificationSettings">
+                            <option value="all">Todas</option>
+                            <option value="none">Ninguna</option>
+                        </select>
+                        <input type="submit" value="Guardar">
+                    </form>
+                </div>
+                <button class="accordion-button">Privacidad</button>
+                <div class="accordion-content">
+                    <form>
+                        <label for="privacySettings">Configuraciones de Privacidad:</label>
+                        <select id="privacySettings">
+                            <option value="public">Público</option>
+                            <option value="private">Privado</option>
+                        </select>
+                        <input type="submit" value="Guardar">
+                    </form>
+                </div>
+            </div>
+        </div>  
+
+
+
+    <script src="js/favoritosAjustes.js"></script> 
+</body>
+
+</html>
