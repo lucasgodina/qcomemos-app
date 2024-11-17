@@ -44,7 +44,7 @@ app.get('/login.html', (req, res) => {
 	res.sendFile(path.join(__dirname, './Frontend/html/home.html'));
 });
 
-app.get('favoritosAjustes.html', (req, res) => {
+app.get('/favoritosAjustes.html', (req, res) => {
 	res.sendFile(path.join(__dirname, './Frontend/html/favoritosAjustes.html'));
 });
 
