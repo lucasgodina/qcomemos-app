@@ -62,11 +62,11 @@ app.use('/', viewRoutes);
 // Rutas de la API
 app.use('/api', userRoutes);
 
-app.listen(3000, () => {
-	console.log('Servidor escuchando en puerto 3000');
-});
+const PORT = 3001;
 
-const PORT = 3000;
+app.listen(PORT, () => {
+	console.log(`Servidor corriendo en puerto ${PORT}`);
+});
 
 sequelize
 	.sync()
