@@ -11,6 +11,7 @@ const app = express();
 // Middlewares
 app.use(cors());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Ruta para servir el archivo home.html
 app.get('/', (req, res) => {
