@@ -10,16 +10,15 @@ document
 		const fecha_nacimiento = document.getElementById('fecha_nacimiento').value;
 		const lugar_usuario = document.getElementById('lugar_usuario').value;
 
-		alert(apiUrl + 'usuario');
 		fetch(apiUrl + 'usuario', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
+			// No se pone el campo confirm_password en el body ya que es solo para verificar que coincida con password
 			body: JSON.stringify({
 				email,
 				password,
-				confirm_password,
 				nombre_usuario,
 				fecha_nacimiento,
 				lugar_usuario,

@@ -5,7 +5,6 @@ const Usuario = require('../Models/usuario');
 
 exports.crearUsuario = async (req, res) => {
 	try {
-		console.log(req.body);
 		const {
 			email,
 			password,
