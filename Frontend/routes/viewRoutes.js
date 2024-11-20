@@ -16,6 +16,10 @@ router.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, '../html/home.html'));
 });
 
+router.get('/home.html', (req, res) => {
+	res.sendFile(path.join(__dirname, '../html/home.html'));
+});
+
 // Ruta para servir el archivo login.html desde 'frontend/html'
 router.get('/login.html', (req, res) => {
 	res.sendFile(path.join(__dirname, '../html/login.html'));

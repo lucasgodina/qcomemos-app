@@ -19,6 +19,7 @@ document
 			body: JSON.stringify({
 				email,
 				password,
+				confirm_password,
 				nombre_usuario,
 				fecha_nacimiento,
 				lugar_usuario,

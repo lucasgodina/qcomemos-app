@@ -200,6 +200,11 @@ document.addEventListener('DOMContentLoaded', function () {
 					place.style.display = 'none'; // Ocultar el lugar
 				}
 			});
+			// Remover la clase 'selected' de los botones
+			filterButtons.forEach((btn) => btn.classList.remove('selected'));
+
+			// Agregar la clase 'selected' al botón seleccionado
+			this.classList.add('selected');
 		});
 	});
 });
