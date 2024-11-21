@@ -5,6 +5,8 @@ const Usuario = require('../Models/usuario');
 
 exports.crearUsuario = async (req, res) => {
 	try {
+		console.log('Cuerpo recibido:', req.body); // <-- Aquí
+
 		const {
 			email,
 			password,
@@ -35,7 +37,6 @@ exports.crearUsuario = async (req, res) => {
 		const usuario = await Usuario.create({
 			email,
 			password,
-			confirm_password,
 			nombre_usuario,
 			fecha_nacimiento,
 			lugar_usuario,

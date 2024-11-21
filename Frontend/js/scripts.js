@@ -15,7 +15,6 @@ document
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			// No se pone el campo confirm_password en el body ya que es solo para verificar que coincida con password
 			body: JSON.stringify({
 				email,
 				password,
@@ -27,20 +26,21 @@ document
 		})
 			.then((response) => {
 				if (!response.ok) {
+					// Captura el error y muestra más detalles
 					return response.text().then((text) => {
-						console.error('Error al crear usuario:', text);
+						console.error('Error del servidor:', text);
 						throw new Error(
 							`Error del servidor: ${response.status} ${response.statusText}`
 						);
 					});
 				}
-				return response.json(); // Devolver el JSON si la respuesta es correcta
+				return response.json(); // Si la respuesta es válida, se convierte a JSON
 			})
 			.then((registro) => {
 				alert('Registro creado con éxito:', registro);
 			})
 			.catch((error) => {
-				alert('Error al crear registro:', error);
+				alert('Error al crear registro:', error.message);
 			});
 	});
 
